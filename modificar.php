@@ -47,7 +47,6 @@ $row = mysqli_fetch_array($query);
     <?php
     }
     ?>
-
     </table>
     <br>
   
@@ -71,9 +70,11 @@ if($accion=="Actualizar"){
     $Email=$_GET['Email'];
     $codMatricula=$_GET['CodMatricula'];
     echo "UPDATE alumnos SET Nombre =? , Email =? , CodMatricula = ? WHERE Id = ?";
-    
     echo "UPDATE alumnos SET Nombre ='".$Nombre. "', Email ='".$Email. "', CodMatricula ='".$codMatricula. "' WHERE Id ='".$bloque."'";
     $sql = "UPDATE alumnos SET Nombre ='".$Nombre. "', Email ='".$Email. "', CodMatricula ='".$codMatricula. "' WHERE Id ='".$bloque."'";
     $query = mysqli_query($conn,$sql);
+    
     mysqli_close($conn);
 }
+?>
+<a href="Tabla.php?">Volver</a>

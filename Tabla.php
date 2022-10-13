@@ -23,7 +23,6 @@ mysqli_close($conn);
             background-color: smoke;
             
         }
-    
     </style>
 </head>
 <div>
